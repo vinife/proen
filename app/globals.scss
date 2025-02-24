@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+@import "node_modules/@govbr-ds/core/src/core.scss";
+
+:root {
+  // --background: #ffffff;
+  // --foreground: #171717;
+
+  --bc1823-lightest: #f9e6e8; /* Bem claro */
+  --bc1823-lighter: #f4b8c0; /* Claro */
+  --bc1823-light: #e67582; /* Um pouco claro */
+  --bc1823-base: #bc1823; /* Cor base */
+  --bc1823-dark: #91191c; /* Escuro */
+  --bc1823-darker: #6a1215; /* Mais escuro */
+  --bc1823-darkest: #42090c; /* Muito escuro */
+  // // Superfície
+  // --background: var(--bc1823-lightest);
+  // --background-rgb: 249, 230, 232; /* RGB equivalente de #f9e6e8 */
+  // --background-light: var(--bc1823-lightest);
+  // --background-light-rgb: 249, 230, 232;
+  // --background-alternative: var(--bc1823-lighter);
+  // --background-alternative-rgb: 244, 184, 192;
+  --background-dark: var(--bc1823-lightest);
+  // --background-dark-rgb: 145, 25, 28;
+
+  // // Bordas
+  // --border-color: var(--bc1823-dark);
+  // --border-color-alternative: var(--bc1823-darker);
+
+  // // Leitura
+  // --color: var(--bc1823-base);
+  // --color-light: var(--bc1823-light);
+  // --color-dark: var(--bc1823-dark);
+
+  // // Interativa
+  // --interactive: var(--bc1823-base);
+  // --interactive-light: var(--bc1823-light);
+  // --interactive-dark: var(--bc1823-darker);
+  // --interactive-alternative: var(--bc1823-darkest);
+
+  // // Feedback Informação
+  // --info: var(--bc1823-light);
+  // --info-alternative: var(--bc1823-lightest);
+
+  // // Feedback Sucesso
+  // --success: var(--bc1823-light);
+  // --success-alternative: var(--bc1823-lighter);
+
+  // // Feedback Alerta
+  // --warning: var(--bc1823-base);
+  // --warning-alternative: var(--bc1823-lightest);
+
+  // // Feedback Erro
+  // --danger: var(--bc1823-base);
+  // --danger-alternative: var(--bc1823-dark);
+
+  // // Estados
+  // --hover-light: var(--bc1823-light);
+  // --hover-dark: var(--bc1823-dark);
+  // --pressed-light: var(--bc1823-dark);
+  // --pressed-dark: var(--bc1823-darker);
+  // --focus-color-light: var(--bc1823-light);
+  // --focus-color-dark: var(--bc1823-dark);
+  // --focus: var(--bc1823-base);
+
+  // // Outros
+  --active: var(--bc1823-base);
+  --selected: var(--bc1823-light);
+  --on: var(--bc1823-light);
+  --off: var(--bc1823-dark);
+}
+
+footer {
+  background-color: #f8f9fa; // Definindo fundo claro (ajuste conforme necessário)
+  color: #333; // Cor escura para a fonte, mais legível em fundo claro
+
+  .address {
+    font-size: 14px;
+    color: #333; // Cor escura para o endereço
+  }
+
+  .rights {
+    font-size: 12px;
+    color: #555; // Cor um pouco mais clara para direitos autorais, mas ainda legível
+  }
+
+  .social-network-title {
+    color: #333; // Cor das redes sociais, ajuste conforme necessário
+  }
+
+  .social-network a {
+    color: #555; // Cor dos ícones das redes sociais
+  }
+
+  .social-network a:hover {
+    color: #007bff; // Cor de hover para os links das redes sociais
+  }
+}
+
+.address {
+  color: #333; // Cor do texto, mais escura para contraste
+  font-size: 14px; // Ajuste o tamanho da fonte se necessário
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.br-header {
+  --header-logo-small: 16px;
+  --header-logo-medium: 24px;
+  --header-logo-large: 60px;
+  .header-logo {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    float: left;
+    gap: var(--spacing-scale-2x); // Espaçamento entre elementos no logo
+    padding: 10px;
+
+    img,
+    svg {
+      max-height: var(--header-logo-size); // Controla a altura do logo
+      max-width: 100%; // Controla a largura para respeitar o contêiner
+      width: auto; // Ajusta a largura automaticamente
+    }
+  }
+
+  // Regras adicionais para diferentes tamanhos de tela
+  @media (min-width: 576px) {
+    --header-logo-size: var(
+      --header-logo-large
+    ); // Aumenta o tamanho do logo em telas maiores
+  }
+}
+
+// .br-colors {
+//   $color-primary-pastel-01: #f3c3c7; // Tom pastel mais claro
+//   $color-primary-pastel-02: #f8d8db; // Tom pastel levemente mais escuro
+//   $color-primary-lighten-01: #e34d59; // Tom mais claro e vibrante
+//   $color-primary-lighten-02: #cf3742; // Tom intermediário mais claro
+//   $color-primary-default: #bc1823; // Cor principal
+//   $color-primary-darken-01: #881219; // Tom mais escuro
+//   $color-primary-darken-02: #570c10; // Tom bem escuro
+// }

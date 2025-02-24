@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import Header from "./components/layout/Header"
+import Footer from "./components/layout/Footer"
+import Breadcrumb from "./components/layout/Breadcrumb";
+import Script from "next/script";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,11 +18,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="pt-br">
+      <head>
+        <title>Meu Site</title>
+        <meta name="description" content="Descrição do meu site" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/rawline" />
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' />
+      </head>
+      <body>
+        <Script src="/core.min.js" strategy="beforeInteractive"></Script>
+        <Script src="/core-init.min.js" strategy="beforeInteractive"></Script>
+        <Header></Header>
+        <main className="container my-4">
+          <Breadcrumb></Breadcrumb>
+          {children}
+        </main>
+        <Footer></Footer>
       </body>
     </html>
   );
