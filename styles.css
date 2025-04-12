@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --lightest: #f9e6e8; /* Bem claro */
   --lighter: #f4b8c0; /* Claro */
@@ -69,6 +75,7 @@
   align-items: center;
   padding: 20px;
   height: 100%; /* garantir altura total se necessário */
+  gap: 20px;
   text-align: center;
 }
 
