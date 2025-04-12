@@ -1,7 +1,7 @@
 <html lang="pt-br">
   <head>
-    <title>Meu Site</title>
-    <meta name="description" content="Descrição do meu site" />
+    <title>Mostra de Profissões UFSJ</title>
+    <meta name="description" content="Site da Mostra de Profissões da UFSJ" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/rawline" />
     <link
@@ -17,34 +17,23 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" type="module"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.6.1/dist/core.min.js"></script>
   </head>
   <body>
-    <header class="br-header" data-component="header">
+    <header class="br-header" aria-label="Cabeçalho institucional">
       <div class="container-lg">
         <div class="header-top">
           <div class="header-logo">
-            <a href="index.html" passHref>
-              <img
-                src="images/logo.png"
-                alt="Logo do site"
-                layout="intrinsic"
-                width="{250}"
-                height="{134}"
-                priority
-              />
+            <a href="index.html">
+              <img src="images/logo.png" alt="Logo do site" />
             </a>
             <span class="br-divider vertical"></span>
-            <div class="header-bottom">
-              <div class="header-menu">
-                <div class="header-info">
-                  <a href="index.html" passHref>
-                    <div class="header-title text-up-04">Mostra de Cursos</div>
-                    <div class="header-subtitle">Graduação</div></a
-                  >
-                </div>
+
+            <div class="header-menu">
+              <div class="header-info">
+                <a href="index.html">
+                  <div class="header-title">Mostra de Cursos</div>
+                  <div class="header-subtitle">Graduação</div>
+                </a>
               </div>
             </div>
           </div>
@@ -63,9 +52,7 @@
                 <div class="header">
                   <div class="title">Acesso Rápido</div>
                 </div>
-                <a class="br-item" href="divinopolis.html" data-link
-                  >Divinópolis</a
-                >
+                <a class="br-item" href="divinopolis.html">Divinópolis</a>
                 <a class="br-item" href="ourobranco.html">Ouro Branco</a>
                 <a class="br-item" href="saojoaodelrei.html"
                   >São João Del-Rei</a
@@ -77,21 +64,16 @@
         </div>
       </div>
     </header>
-    <main class="container my-4">
+
+    <main>
       <section class="container">
-        <div class="pl-sm-3">
-          <div class="banner">
-            <img
-              src="images/saojoaodelrei.jpg"
-              alt="Foto de São João Del Rei"
-            />
-          </div>
+        <div class="banner">
+          <img src="images/saojoaodelrei.jpg" alt="Foto de São João Del Rei" />
         </div>
-        <div class="main-content pl-sm-3 mt-4" id="main-content">
-          <div class="max-w-screen-md mx-auto p-4">
-            <h1 class="text-center text-2xl font-bold mb-4">
-              São João Del Rei
-            </h1>
+
+        <div class="main-content pt-4" id="main-content">
+          <div class="p-4">
+            <h1 class="text-center mb-4">São João Del Rei</h1>
             <span class="text-justify leading-relaxed">
               <p>
                 <strong>São João del-Rei</strong> é um município brasileiro do
@@ -1242,31 +1224,31 @@
         </div>
       </section>
     </main>
-    <footer class="br-footer" data-component="footer">
+
+    <footer class="br-footer inverted" aria-label="Rodapé institucional">
       <div class="container-lg">
         <div class="logo">
           <img
             src="images/govbr.svg"
-            alt="Imagem"
-            width="{100}"
-            height="{50}"
+            alt="Brasão do Governo Federal"
+            width="100"
+            height="50"
           />
         </div>
 
-        <div class="all-socials">
-          <div class="social-container">
-            <div class="instituition-container">
-              <a
-                href="https://ufsj.edu.br/proen/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="ufsj-logo"
-              >
-                <img src="images/logo_ufsj.png" alt="PROEN" class="logo-ufsj" />
-              </a>
-            </div>
-            <div class="social-network mt-2 mb-6">
-              <div class="flex gap-3">
+        <div class="row center">
+          <div class="instituition-wrapper">
+            <a
+              href="https://ufsj.edu.br/proen/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="logo-link ufsj-link"
+            >
+              <img src="images/logo_ufsj.png" alt="PROEN" class="logo-ufsj" />
+            </a>
+
+            <div class="social-network">
+              <div class="social-buttons">
                 <a
                   class="br-button circle"
                   href="https://www.facebook.com/ufsjbr"
@@ -1295,19 +1277,21 @@
             </div>
           </div>
 
-          <div class="social-container">
-            <div class="instituition-container">
-              <a
-                href="https://ufsj.edu.br/proen/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="institution-logo"
-              >
-                <img src="images/PROEN-4.png" alt="PROEN" />
-              </a>
-            </div>
-            <div class="social-network mt-2 mb-6">
-              <div class="flex gap-3">
+          <div class="instituition-wrapper">
+            <a
+              href="https://ufsj.edu.br/proen/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="logo-link"
+            >
+              <img
+                src="images/PROEN-4.png"
+                alt="PROEN"
+                class="logo-seaca-proen"
+              />
+            </a>
+            <div class="social-network">
+              <div class="social-buttons">
                 <a
                   class="br-button circle"
                   href="https://www.facebook.com/proenufsj/"
@@ -1328,19 +1312,22 @@
             </div>
           </div>
 
-          <div class="social-container">
-            <div class="instituition-container">
-              <a
-                href="https://ufsj.edu.br/seaca/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="institution-logo"
-              >
-                <img src="images/SEACA-4.png" alt="SEACA" />
-              </a>
-            </div>
-            <div class="social-network mt-2 mb-6">
-              <div class="flex gap-3">
+          <div class="instituition-wrapper">
+            <a
+              href="https://ufsj.edu.br/seaca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="logo-link"
+            >
+              <img
+                src="images/SEACA-4.png"
+                alt="SEACA"
+                class="logo-seaca-proen"
+              />
+            </a>
+
+            <div class="social-network">
+              <div class="social-buttons">
                 <a
                   class="br-button circle"
                   href="https://www.youtube.com/channel/UCJC-WAkHXJ6auC7Egp_8T9Q"
@@ -1362,7 +1349,8 @@
           </div>
         </div>
       </div>
-      <span class="br-divider my-3"></span>
+
+      <span class="br-divider"></span>
       <div class="container-lg">
         <div class="info">
           <div class="text-down-01 text-medium pb-3">
@@ -1372,5 +1360,7 @@
         </div>
       </div>
     </footer>
+    <script src="script.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@govbr-ds/core@3.6.1/dist/core.min.js"></script>
   </body>
 </html>

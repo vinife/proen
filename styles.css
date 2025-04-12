@@ -12,13 +12,24 @@
   --dark: #91191c; /* Escuro */
   --darker: #6a1215; /* Mais escuro */
   --darkest: #42090c; /* Muito escuro */
-  --active: var(---base);
-  --selected: var(--light);
-  --on: var(--light);
-  --off: var(--dark);
   --banner-big: 300px; /* Tamanho do banner grande */
   --banner-medium: 250px; /* Tamanho do banner médio */
   --banner-small: 200px; /* Tamanho do banner pequeno */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* viewport height */
+}
+
+main {
+  flex: 1;
 }
 
 /* Header */
@@ -34,6 +45,7 @@
 }
 
 /* Main */
+
 .main-content {
   display: flex;
   flex-direction: column;
@@ -87,7 +99,9 @@
 }
 
 .card-text {
+  font-weight: normal;
   font-size: clamp(1.2rem, 3vw, 1.5rem);
+  margin: 0;
 }
 
 .info-content {
@@ -112,6 +126,7 @@
 .br-footer {
   position: relative; /* Para evitar que o footer fique fixo */
   --background-light: var(--lightest);
+  margin-top: auto;
 }
 
 .instituition-wrapper {
@@ -159,15 +174,6 @@
 }
 
 @media screen and (min-width: 1400px) {
-  body {
-    min-height: 100vh; /* viewport height */
-    margin: 0;
-  }
-
-  main {
-    flex: 1; /* Isso faz com que o conteúdo ocupe todo o espaço disponível */
-  }
-
   .banner {
     height: var(--banner-big); /* ou o tamanho que quiser */
   }
