@@ -39,8 +39,8 @@ main {
   left: 0;
   width: 100%;
   z-index: 1000;
-  --header-logo-small: 16px;
-  --header-logo-medium: 24px;
+  --header-logo-small: 24px;
+  --header-logo-medium: 32px;
   --header-logo-large: 60px;
 }
 
@@ -154,6 +154,12 @@ main {
   max-height: 250px;
   width: auto;
   display: block;
+  margin: auto;
+}
+
+.br-accordion {
+  width: 100%;
+  max-width: 800px; /* ou o tamanho que quiser */
   margin: auto;
 }
 
